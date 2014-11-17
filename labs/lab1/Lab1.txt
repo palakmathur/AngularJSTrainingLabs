@@ -1,0 +1,11 @@
+Lab 1:
++ Begin building a “Lemon-aide” application
++ Create a sales page for selling products:
+  - Large lemonade, Medium lemonade, Healthy snack, Treat
++ Create an application namespace
++ Create a controller to handle button interaction
+  - Update the individual product totals when the buttons are clicked
+  - Update the transaction quantity when buttons are clicked
+  - Update the transaction cost when the buttons are clicked
+  - Decide how much you want the cost of each product to be
+  - Clear the transaction when the “Clear Transaction” button is pressed

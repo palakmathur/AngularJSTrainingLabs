@@ -1,0 +1,11 @@
+{
+  "name": "lab1",
+  "version": "0.0.0",
+  "authors": [
+    "Craig McKeachie <craigdmckeachie@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.3"
+  }
+}

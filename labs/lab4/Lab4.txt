@@ -1,0 +1,15 @@
+Lab 4:
++ Create a sales history page
+  - Create object literal with 20 sales
+  - Display the tabular data on the screen
+    + Make the odd/even rows look different
+  - Give the ability for your user to pick how many rows to see
+    + Let the user know how many total records there are
++ Filter the data
+  - Make the numbers look nice
+  - Make the date show like this: JAN 1, 2012
+  - Limit the report to 10 rows
++ Break the controllers up into separate files
++ Set today’s date in the header
+  - <time datetime=“1970-1-1”>January 1, 1970</time>
+  

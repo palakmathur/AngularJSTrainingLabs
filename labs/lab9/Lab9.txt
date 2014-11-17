@@ -1,0 +1,18 @@
+Lab 9:
+- On the supplies page 
+  + Remove the reset button
+  + On initialization of the supplies check to see if the supplies service has been instantiated
+  + If it hasn’t, fetch the supply quantities and set it
+- On initialization of the sell page check to see if we have initialized our transaction service
+  + If the price is already set then we don’t need to go to the backend
+  + Create a json file for cost initialization
+  + Use the $resource service
+  + Get the price to show in our sub views: only show a price if there is one
+- On the sell page create the ability to make a purchase
+  + Only allow the transaction to go through if we have:
+    - Something to transact
+    - Enough product for the transaction
+  + At this point: you will need to visit the supplies page before you go to the sell page
+    - We are only initializing the supplies service on the supplies page
+    - We will fix this next lab
+  

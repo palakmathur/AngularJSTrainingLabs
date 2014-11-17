@@ -1,0 +1,18 @@
+{
+  "name": "Kamren",
+  "version": "0.0.0",
+  "authors": [
+    "kamrenz <kamren@developintelligence.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.3",
+    "angular-messages": "~1.3",
+    "angular-resource": "~1.3",
+    "angular-ui-router": "~0.2.11"
+  },
+  "devDependencies": {
+    "jasmine": "~2.0.4",
+    "angular-mocks": "~1.3.0"
+  }
+}

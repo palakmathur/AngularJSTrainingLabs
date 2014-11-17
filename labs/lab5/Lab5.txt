@@ -1,0 +1,11 @@
+Lab 5:
+- Build a form for user submission to donate to Alex’s Lemonade Stand
+  + Get person’s name
+  + Get a person’s phone number
+  + Get their mailing address
+  + Get their zip-code
+  + Get their email address
+  + Have them select the best way to contact them
+  + On submission display a thank you message
+  + If the form isn’t valid display error
+  

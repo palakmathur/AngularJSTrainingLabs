@@ -1,0 +1,32 @@
+<!doctype html>
+<html id="data-ng-app" data-ng-app="demo">
+	<head>
+		<meta charset="utf-8">
+		<title>ui router demo</title>
+		<style type="text/css">.active{background-color: #eee; width:50px; }</style>
+		<!-- IE8-HTML5: https://code.google.com/p/html5shiv/ -->
+		<script src="js/libs/html5shiv.js"></script>
+		<script src="js/libs/angular.js"></script>
+	</head>
+	<body id="index">
+		<header>
+			
+			<nav>
+				<ul>
+				 	<li ui-sref-active="active">
+				 		<a ui-sref="home">Home</a></li>
+				 	<li ui-sref-active="active">
+				 		<a ui-sref="about">About</a>
+				 	</li>
+			 	</ul>		
+			</nav>
+			<h1><a ui-sref=".">{{page.heading}}</a></h1>
+		</header>
+
+ 		<!-- Angular UI Router Directive for template insertion -->
+  		<div id="content" ui-view></div>
+  	
+		<script src="js/libs/angular-ui-router.js"></script>		
+		<script src="js/main.js"></script>		
+	</body>
+</html>

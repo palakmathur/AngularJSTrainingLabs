@@ -1,0 +1,7 @@
+Lab 3:
++ Use the ui-router in your application instead of ngRoute
+  - Bind the page title attribute to each template
+  - Simplify the process of adding an active page class
++ Sell page
+  - Create a nested route for our products
+  - Include a link to info about lemonade, healthy snacks and treats

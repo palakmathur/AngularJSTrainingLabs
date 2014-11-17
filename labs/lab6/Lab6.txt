@@ -1,0 +1,20 @@
+Lab 6:
++ Create a custom directive for the page title 
+  - Use the directive across all you pages
++ Create a custom directive for your reports page
+  - Change up your Sales History Report
+    + Remove the table and give it a card based layout
+  - When a user selects a card make it show as selected
+    + Load your template via Ajax
+    + Have the directive utilize your sales history object
+    + Have the directive add a selected class to the card when clicked
+    + Have the report controller write out wether the month selected was profitable  (i.e. over $200 in gross profit)
++ Bonus
+  - Create a nested footer directive for the card
+  - Set a gross profit to display in the footer of the card
+  - Set up a random number generator to choose from 3 pictures for thumbs up (i.e. congratulations)
+    + Show the picture if it is profitable
+  - Whenever a new card is added (i.e. the number is increased) pick one of the 3 pictures randomly to display
+    + You will need to specify a $watch function for this 
+
+  

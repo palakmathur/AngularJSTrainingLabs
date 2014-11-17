@@ -1,0 +1,17 @@
+<!-- Report state -->
+<section ng-attr-id="{{page.title | lowercase}}">
+	
+	<div lemon-title></div>
+	<section>
+		<p>
+			<a ui-sref=".sales" ui-sref-active="active">Sales History</a> | 
+			<a ui-sref=".donors"
+				ng-class="{active: $state.includes('reports.donors')}">
+				Donor Information
+			</a> |
+			<a ui-sref=".transactions" ui-sref-active="active">Today's Transactions</a>
+			<div ui-view></div>
+		</p>
+	</section>
+
+</section>

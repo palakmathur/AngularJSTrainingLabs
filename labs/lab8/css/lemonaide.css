@@ -1,0 +1,192 @@
+/**
+ * Header rules
+ **/
+header {
+	background-color: #21528a;
+	color: #eee;
+	margin: 0;
+	padding: 1em;
+}
+
+header time {
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 1em;
+	border: 1px solid white;
+	padding: 0 1em;
+}
+
+/**
+ * Footer rules
+ **/
+footer {
+	background-color: #21528a;
+	color: #eee;
+	margin-top: 1em;
+}
+
+footer ul {
+	margin: 0;
+	padding: 1em;
+}
+
+footer li {
+	display: inline;
+	padding: 1em;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer .active, footer li:hover  {
+	background-color: rgba(0,0,0,0.3);
+}
+
+.error {
+	color: red;
+	text-indent: 0.5em;
+}
+
+/**
+ * Rules specific to the Content section of each page.
+ **/
+#content {
+	font-family: "Verdana";
+}
+
+#content h2 {
+	margin-left: 2em;
+}
+
+#content section {
+	padding: 15px 30px 0 0;
+}
+
+#content section p {
+	margin-left: 1em;
+}
+
+/**
+ * Index page specific.
+ **/
+#home img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#home figcaption {
+	font-size: 1.5em;
+}
+
+/**
+ * Sell page specific.
+ **/
+#sell li {
+	border: 1px solid #21528a;
+	border-radius: 1em;
+	line-height: 4em;
+	list-style: none;
+	margin-top: 1em;
+	text-indent: 1em;
+	width: 400px;
+}
+
+#sell li:hover {
+	border-radius: 1em;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+
+#sell li mark {
+	background-color: rgba(255,255,0,0.5);
+	float: right;
+	margin-right: 1em;
+	padding-right: 1em;
+	text-align: left;
+}
+
+#sell li mark:hover {
+	background-color: rgb(255,255,0);
+}
+
+#sell p mark {
+	background-color: #fff;
+}
+
+/**
+ * Report page specific.
+ **/
+ #report table {
+ 	border: 1px solid black;
+ 	border-collapse: collapse;
+ }
+
+  #report th, #report .odd {
+ 	background-color: orange;
+ }
+
+ #report th, #report td {
+ 	padding: 1em;
+ 	text-align: center;
+ }
+
+ #report th {
+ 	border-bottom: 1px solid black;
+ }
+
+ #report .legend {
+ 	border: 1px solid black;
+ 	border-radius: 0.3em;
+ 	padding: 1em;
+ }
+
+/**
+ * Give page specific.
+ **/
+#give #content section, #give #content aside {
+	display: inline-block; 
+	vertical-align: top;
+}
+
+#give img {
+	display: block;	
+	margin: 1em;
+	padding: 1em;
+}
+
+#give form {
+	background-color: #eee;
+	padding: 1em;
+	margin: 1em;
+}
+
+#give label, #give input {
+	display: block;
+}
+
+#give #submitDonation {
+	display: block;
+	line-height: 5em;
+	margin: 1em auto 0;
+	width: 10em;
+}
+
+/**
+ * Supplies page specific.
+ **/
+ #supplies #updateSupplies {
+	display: block;
+	line-height: 5em;
+	margin: 1em auto 0;
+	width: 10em;
+}
+
+ #supplies label, #supplies input {
+ 	display: block;
+ }
+
+ #supplies form {
+ 	padding: 1em;
+ }

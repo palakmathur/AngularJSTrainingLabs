@@ -1,0 +1,33 @@
++ Place 3 overarching views in our app
+  - Header view, Footer view, ‘’ (i.e. the content view)
+
++ Make a transaction API service
+  - It has been started as a $resource move it to use Restangular
+  - Utilize the provider to set the base url for all Restangular requests to use ‘/data’ as the root
+  - Utilize the Restangular request interceptor to transform our   request of parameter names going to the back-end
+  - /data/transactions is the backend service
+
++ Modify our reports page
+  - The reports state should be abstract
+  - Make it have sales history nested state (you already have this)
+  - Make it have a transactions nested state that lists out all the running transactions
+    + Show the transaction information
+    + Use the resolve property to for getting the Transactions from the Transaction API service before the view is loaded
+    + Set the returned transactions onto the $scope via this resolved dependency
+  - Make it have a donors nested state that lists out all the donors
+    + Will need to resolve the Donors/Philanthropists API Service
+    + Make your donor list filterable by name and best contact
+  - Make a nested donor state within the donors state to show a specific donor with full information 
+    + Allow that donor to be deleted
+    + After deletion send the user to the donors state
+    + Will need to use the parent’s resolved donors
+    + Will need to find the donor object utilizing $stateParams
+
++ Dynamically add your page title to your HTML element id
+  - Make it lowercase so our CSS still works
+
++ Make your routes utilize the “parent” property
+
++ Create a Geolocation provider service
+  - Have it find the distance between us and Alex’s Lemonade Stand Headquarters that will display in footer
+  - Within a config block set the coordinates for Alex’s Lemonade stand to pass into the Geolocation service

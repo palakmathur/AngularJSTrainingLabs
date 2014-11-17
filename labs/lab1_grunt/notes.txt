@@ -1,0 +1,17 @@
+
+
+
+delete bower_components folder
+bower install
+
+delete node_modules folder
+npm install
+
+grunt-wiredep missing from package.json
+npm install grunt-wiredep --save  
+	should be --save-dev
+
+new project
+npm install
+bower install
+grunt	

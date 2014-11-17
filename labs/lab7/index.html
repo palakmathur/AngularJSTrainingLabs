@@ -1,0 +1,55 @@
+<!doctype html>
+<html id="data-ng-app" data-ng-app="lemonadeApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Lemon-Aide: Helping those lemonade vendors</title>
+		<link rel="stylesheet" href="css/lemonaide.css">
+		<link rel="stylesheet" href="css/report-listing.css">
+		<!-- IE8-HTML5: https://code.google.com/p/html5shiv/ -->
+		<script src="js/libs/html5shiv.js"></script>
+		<script src="js/libs/angular.js"></script>
+	</head>
+	<body id="index">
+		<header ng-controller="HeaderController">
+			<h1>Lemon-Aide: Helping those lemonade vendors</h1>
+			<time datetime="{{date.machine | date:'yyyy-M-d'}}">{{date.human | date:'longDate'}}</time>
+		</header>
+
+ 			<!-- AngularJS Directive for template insertion -->
+  			<div id="content" ui-view></div>
+  	
+		<footer>
+			<nav>
+				<ul>
+				 	<li ui-sref-active="active">
+				 		<a ui-sref="home">Lemon-Aide</a>
+				 	</li>
+				 	<li ui-sref-active="active">
+						<a ui-sref="give">Give</a>
+				 	</li>				 		
+				 	<li ui-sref-active="active">
+				 		<a ui-sref="sell">Sell</a>
+				 	</li>
+				 	<li ui-sref-active="active">
+						<a ui-sref="report">Report</a>
+				 	</li>
+				 	<li><a href="http://www.alexslemonade.org/" target="_blank">The Imagineer!</a></li>
+			 	</ul>		
+			</nav>
+		</footer>	
+		<script src="js/libs/angular-ui-router.js"></script>
+		<script src="js/libs/angular-messages.js"></script>		
+		<script src="js/main.js"></script>	
+		<script src="js/filters.js"></script>
+		<script src="js/controller/header-controller.js"></script>		
+		<script src="js/controller/home-controller.js"></script>
+		<script src="js/controller/sell-controller.js"></script>			
+		<script src="js/controller/product-controller.js"></script>	
+		<script src="js/controller/report-controller.js"></script>	
+		<script src="js/controller/give-controller.js"></script>	
+		<script src="js/controller/give_form-controller.js"></script>
+		<script src="js/directive/lemon_title-directive.js"></script>
+		<script src="js/directive/report_listing-directive.js"></script>		
+		<script src="js/service/transaction-service.js"></script>	
+	</body>
+</html>

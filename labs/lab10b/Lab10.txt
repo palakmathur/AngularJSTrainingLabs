@@ -1,0 +1,18 @@
+Lab 10:
+- Create a Supplies Service API
+  + Have a $http service to hit /data/initial-supplies for product quantities
+    - Transform the data coming from the back-end for the Supplies Service
+  + Utilize the Supplies Service API within the Supplies Service for initialization of quantities
+  + Have a $http service to hit /data/cost.json for product cost 
+  + Utilize the Supplies Service API within the Transaction Service for initialization of costs
+- Let your app make a transaction without having to go to the supplies page first
+  + Utilize the Transaction Service and Supplies Service within the Sell Controller
+- Add error messages in a constant service
+  + Allow for all the services to have the same display errors (i.e. Server is down)
+- Use router resolves for route controller injection
+  + Have the Supplies Service be initialized within the resolve property for the supplies ui-router state
+- Transform the data coming from the back-end for the Supplies Service
+  + /data/initial-supplies is the supplies back-end service you will need
+- Create a Geolocation service
+  + Have it display the users current latitude / longitude on the form page
+  

@@ -1,0 +1,8 @@
+/*.class-animation-add {
+	transition: 0.3s linear all;
+	background-color: rgb(255,255,255);
+}
+
+.class-animation-add-active {
+	background-color: rgb(255,255,0) !important;
+}*/

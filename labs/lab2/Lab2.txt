@@ -1,0 +1,10 @@
+Lab 2:
++ On the sell page
+  - Create a sub-controller for SellController that handles the Product interaction
++ Make a single page application
+  - Create an lemonaide template to show this is about aiding lemonade vendors :)
+  - Get $routeProvider working with templates for the sell page and the lemonaide page
+  - Include a footer navigation that will switch you between the templates
+  - Get the footer links to show the appropriate highlighted link coordinated with the showing template
+
++ Your node server will be needed for this lab

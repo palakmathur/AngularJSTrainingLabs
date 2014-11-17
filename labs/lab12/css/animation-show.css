@@ -1,0 +1,9 @@
+/*.show-animation.ng-hide{
+	opacity: 0;
+}
+
+.show-animation.ng-hide-remove-active {
+  	-webkit-transition: 0.5s linear all;
+  	transition: 0.5s linear all;
+  	opacity: 1;
+}*/

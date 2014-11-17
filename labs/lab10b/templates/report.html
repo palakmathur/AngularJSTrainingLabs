@@ -1,0 +1,31 @@
+<section id="report">
+	
+	<div lemon-title></div>
+	<section>
+		<p>
+			There are <mark>{{sales.length}}</mark> months of sales<br>
+			How many would you like to see?<br>
+			<input type="number" id="numOfRows" 
+				ng-model="report.limit"/>
+		</p>
+		<p ng-if="report.selectedReport" ng-class="{error: !report.selectedReport.profitable}">
+			The report created on {{report.selectedReport.date}} shows that month we  
+			<span ng-show="report.selectedReport.profitable"> were profitable</span><span ng-show="!report.selectedReport.profitable"> weren't profitable</span>.
+		</p>
+		<ul>
+			 <li lemon-report-listing 
+			 	report="sale" 
+			 	limit="report.limit"
+			 	action="setSelectedReport(selectedReport)" 
+			 	ng-repeat="sale in ( sales | limitTo: report.limit )" 
+				class="lemonReportListing"
+			 	ng-class="{odd:$odd}">
+				<span>{{$index + 1}}: </span>
+			</li>
+		</ul>
+		<p class="legend">
+			<img width="20px" ng-src="{{sales[0].goodImage}}" alt="Good jiorb"  />
+			Over $200 worth of sales
+		</p>
+	</section>
+</section>

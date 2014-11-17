@@ -1,0 +1,29 @@
+path to angular wrong
+path to angular ui wrong didn't include release directory
+use ng-view instead of ui-view
+$stateProvider.state('',{url not path:})
+need to define controller either via router or ng-controller directive
+
+
+-----------------
+ui-router
+-------------
+named views don't have url property because they are partials, just get this from their parent, also don't need controllers (but can they have one?) because they get that from their parent as well
+
+url
++
+templateUrl     or	views{ 'view-name': {}  }
+Controller
+
+look for ui-view="content" not in app route but in parent route of app's template index.html
+
+content@ is set on 'view-name' not url or templateUrl
+
+content@app doesn't work, content@ does
+content@ = view-name@[root state] not view-name@[app state]
+
+***view-name@state-name with template that has the named view (ui-view) that needs to be replaced
+
+app.subscribers.detail goes in nested ui-view not named view 
+because named view content already filled up this is just nested child so doesn't have views property instead templateUrl and controller moved up outside view associated with specific route
+-----------

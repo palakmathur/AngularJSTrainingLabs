@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app='demo'>
+<meta charset='UTF-8'>
+<head>
+	<title></title>
+	<style type="text/css">
+		[ng-cloak]{display: none;}
+	</style>
+</head>
+<body ng-cloak>
+	<div id="content" ng-controller="DemoController">
+		
+
+		Why don't you choose a Toyota: 
+		<select ng-options="car.model for car in cars" ng-model="currentlySelected1">
+		<option value="">--select model--</option>
+		</select>
+
+		Why don't you choose a Toyota: 
+		<select ng-options="car.model for car in cars" ng-model="currentlySelected2">
+		</select>
+
+		Why don't you choose a Toyota: 
+		<select ng-options="car.model for car in cars" ng-model="currentlySelected3">
+		</select>
+
+		<br>
+
+		<input type="text" ng-model="sentence.speak" ng-change="amplify()">
+		<span>{{sentence.yell}}</span>
+
+		<form name="buyerInformation" novalidate ng-submit="submitForm()">
+			<label for="name">Name</label>
+			<input type="text" name="name" ng-model="buyer.name" required ng-minlength="3" ng-pattern="/[a-zA-Z]/"  />
+			<span ng-show="buyerInformation.name.$dirty && buyerInformation.name.$invalid" >Name is required </span>	
+			
+			<span ng-show="buyerInformation.name.required.$valid && buyerInformation.name.$dirty && buyerInformation.name.$invalid" >Please enter 3 characters. </span>
+
+			<label>Email</label>
+			<input type="email" name="email" ng-model="buyer.email">
+			<span ng-show="buyerInformation.email.$dirty && buyerInformation.email.$invalid">Must be a valid email.</span>
+			<label>Age</label>
+			<input type="number" name="age" ng-model="buyer.age" ng-minlength="16">
+			<span ng-show="buyerInformation.age.$dirty && buyerInformation.age.$invalid">Must be at least 16 years old.</span>
+			<label>Bank URL</label>
+			<input type="url" name="bankURL" ng-model="buyer.bankURL">	
+			<span ng-show="buyerInformation.bankURL.$dirty && buyerInformation.bankURL.$invalid">Must be a valid URL. (start with http:// or https://)</span>
+
+			<br>
+			<div class="" ng-messages="buyerInformation.name.$error" ng-messages-multiple >
+				<div ng-message="minlength">Must be at least 3 characters long.</div>
+				<div ng-message="pattern">Must contain only letters.</div>
+			</div>	
+
+			<input type="submit" value="Apply">
+		</form>
+
+	</div>
+
+
+	<script type="text/javascript"  src="/js/libs/angular.js"></script>
+	<script type="text/javascript" src="/js/libs/angular-messages.js"></script>
+	<script type="text/javascript" src="/js/main.js" ></script>
+</body>
+</html>

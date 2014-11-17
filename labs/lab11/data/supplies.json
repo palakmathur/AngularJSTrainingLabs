@@ -1,0 +1,8 @@
+{ 
+	"initial": {
+		"lemonadeQuantity": 4, 
+		"healthySnackQuantity": 2, 
+		"treatQuantity" : 2
+	}
+}
+

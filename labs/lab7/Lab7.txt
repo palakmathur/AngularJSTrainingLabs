@@ -1,0 +1,11 @@
+Lab 7:
+- Our transaction logic should be placed in a service
+
+- Have the transaction service do all the accounting
+  + Set default prices in the transaction service
+- Have our controllers invoke methods on the transaction service for:
+  + Incrementing product sales
+  + Getting product sales
+  + Clearing out the transaction
+
+  

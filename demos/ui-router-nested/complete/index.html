@@ -1,0 +1,24 @@
+<!doctype html>
+<html id="data-ng-app" data-ng-app="demo">
+	<head>
+		<meta charset="utf-8">
+		<title>ui router demo</title>
+		<style type="text/css">
+			.selected{background-color: #efefef; width:120px; } 
+			.detail{width: 300px;margin: 30px;border-top: 1px solid #efefef;}
+		</style>
+		<!-- IE8-HTML5: https://code.google.com/p/html5shiv/ -->
+		<script src="js/libs/html5shiv.js"></script>
+		
+	</head>
+	<body id="index">
+		
+		<!-- Angular UI Router Directive for template insertion -->
+  		<div id="content" ui-view></div>
+  	
+		<script src="js/libs/angular.js"></script>
+		<script src="js/libs/underscore.js"></script>
+		<script src="js/libs/angular-ui-router.js"></script>		
+		<script src="js/main.js"></script>		
+	</body>
+</html>

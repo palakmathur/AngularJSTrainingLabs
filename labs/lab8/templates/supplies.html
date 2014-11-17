@@ -1,0 +1,32 @@
+<section id="supplies">
+	
+	<div lemon-title></div>
+	<p>
+		Yikes! We can't run out of product. Make sure our levels are looking good! Otherwise its time to hop in the <em>Mini</em> and run to the market!
+	</p>
+	<form id="saveSupplies">
+
+		<label for="lemonadeSupply">Lemonaide (in cups) <mark>{{initial.lemonadeQuantity}}</mark> out of <data>{{maximum.lemonadeQuantity}}<data></label>
+		<input type="range" id="lemonadeSupply" name="lemonadeSupply" 
+			min="1" max="{{maximum.lemonadeQuantity}}" 
+			ng-model="initial.lemonadeQuantity"
+			ng-readonly="true"/>
+		
+		<label for="fruitSupply">Fruit (in pieces) <mark>{{initial.fruitQuantity}}</mark> out of <data>{{maximum.fruitQuantity}}</data></label>
+		<input type="range" id="fruitSupply" name="fruitSupply" 
+			min="1" max="{{maximum.fruitQuantity}}"
+			ng-model="initial.fruitQuantity"
+			ng-readonly="true"/>
+		
+		<label for="treatsSupply">Treats (in bags) <mark>{{initial.treatQuantity}}</mark> out of <data>{{maximum.treatQuantity}}</data></label>
+		<input type="range" id="treatsSupply" name="treatsSupply" 
+			min="1" max="{{maximum.treatQuantity}}"
+			ng-model="initial.treatQuantity"
+			ng-readonly="true"/>
+
+		<hr>
+
+		<button ng-click="resetSupplies()">Reset Supplies</button>
+	</form>
+
+</section>

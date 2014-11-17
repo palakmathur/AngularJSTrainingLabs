@@ -1,0 +1,13 @@
+<p>
+	<em>Have you ever had this?</em><br>
+	<b>{{info.description}}</b><br>
+</p>
+</p>
+<p>
+	<em>But is it good for you?</em><br>
+	<b>{{info.health}}</b>
+</p>
+<p ng-if="cost.largeLemonade && cost.mediumLemonade">
+	A large lemonade is only {{cost.largeLemonade | currency}}<br/>
+	A medium lemonade is only {{cost.mediumLemonade | currency}}
+</p>

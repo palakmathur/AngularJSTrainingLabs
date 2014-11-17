@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="lemonadeApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Lemon-Aide: Helping those lemonade vendors</title>
+		<link rel="stylesheet" href="css/lemonaide.css">
+		<!-- IE8-HTML5: https://code.google.com/p/html5shiv/ -->
+		<script src="js/libs/html5shiv.js"></script>
+		<script src="js/libs/angular.js"></script>
+		<script src="js/libs/angular-route.js"></script>
+	</head>
+	<body id="index">
+		<header>
+			<h1>Lemon-Aide: Helping those lemonade vendors</h1>
+			<time datetime="1970-1-1">January 1, 1970</time>
+		</header>
+ 			<!-- AngularJS Directive for template insertion -->
+  			<div id="content" ng-view></div>
+  		
+		<footer>
+			<nav>
+				<ul>
+				 	<li ng-class="{active: activeTab == 'home'}">
+				 		<a href="#/">Lemon-Aide</a></li>
+				 	<li ng-class="{active: activeTab == 'sell'}">
+				 		<a href="#/sell">Sell</a>
+				 	</li>
+				 	<li><a href="http://www.alexslemonade.org/" target="_blank">The Imagineer!</a></li>
+			 	</ul>		
+			</nav>
+		</footer>	
+		<script src="js/main.js"></script>		
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- Report: Donor sub-state -->
+<h3 ng-hide="donors.length">
+	No donors in our history yet...
+</h3>
+<section ng-if="donors.length">
+	<p>
+		What donor are you looking for?<br>
+		<input type="text" 
+			ng-model="search.nameAndBestContact"
+			placeholder="Filter by name or contact" />		
+	</p>
+	<div ui-view></div>	
+	<h3 ng-if="messages.donorRemovalError" class="error">The donor couldn't be deleted</h3>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>Best Contact</th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="donor in donors | orderBy:'name' | filter:searchNameAndBestContact"
+			ng-class="{odd:$odd}"
+			class="structure-animation" >
+			<td>{{donor.name}}</td>
+			<td>{{donor.phone}}</td>	
+			<td>{{donor.email}}</td>	
+			<td>{{donor.bestContact}}</td>	
+			<td><a ui-sref="reports.donors.donor({donor: donor.id})">Full Info</a></td>	
+		</tr>
+	</table>
+</section>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html id="data-ng-app" data-ng-app="lemonadeApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Lemon-Aide: Helping those lemonade vendors</title>
+		<link rel="stylesheet" href="css/lemonaide.css">
+		<link rel="stylesheet" href="css/report-listing.css">
+		<link rel="stylesheet" href="css/animation-structure.css">
+		<link rel="stylesheet" href="css/animation-class.css">
+		<link rel="stylesheet" href="css/animation-show.css">
+		<!-- IE8-HTML5: https://code.google.com/p/html5shiv/ -->
+		<script src="js/libs/html5shiv.js"></script>
+		<script src="js/libs/jquery-2.x.js"></script>
+		<script src="js/libs/jquery.color.js"></script>
+	</head>
+	<body id="index">
+		<!-- Header named view -->
+		<div ui-view="header"></div>
+
+		<!-- AngularJS Directive for template insertion -->
+		<div id="content" ui-view></div>
+		
+		<!-- Footer named view -->
+		<div ui-view="footer"></div>
+  	
+		<script src="js/libs/underscore.js"></script>
+		<script src="js/libs/angular.js"></script>
+		<script src="js/libs/restangular.js"></script>
+		<script src="js/libs/angular-ui-router.js"></script>
+		<script src="js/libs/angular-messages.js"></script>		
+		<script src="js/libs/angular-resource.js"></script>		
+		<script src="js/libs/angular-animate.js"></script>	
+		<script src="js/main.js"></script>
+		<script src="js/state/general-states.js"></script>
+		<script src="js/state/sell-states.js"></script>
+		<script src="js/state/reports-states.js"></script>	
+		<script src="js/filters.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="js/controller/header-controller.js"></script>	
+		<script src="js/controller/footer-controller.js"></script>		
+		<script src="js/controller/home-controller.js"></script>
+		<script src="js/controller/sell-controller.js"></script>			
+		<script src="js/controller/product-controller.js"></script>	
+		<script src="js/controller/report-controller.js"></script>
+		<script src="js/controller/report_sales-controller.js"></script>	
+		<script src="js/controller/report_donors-controller.js"></script>	
+		<script src="js/controller/report_transactions-controller.js"></script>	
+		<script src="js/controller/give-controller.js"></script>	
+		<script src="js/controller/give_form-controller.js"></script>
+		<script src="js/controller/supplies-controller.js"></script>			
+		<script src="js/directive/lemon-title-directive.js"></script>
+		<script src="js/directive/report_listing-directive.js"></script>			
+		<script src="js/service/constants.js"></script>		
+		<script src="js/service/transaction-service.js"></script>
+		<script src="js/service/supplies-service.js"></script>	
+		<script src="js/service/current_location-service.js"></script>
+		<script src="js/service/distance-service.js"></script>	
+		<script src="js/service/philanthropist_api-service.js"></script>
+		<script src="js/service/transaction_api-service.js"></script>
+		<script src="js/service/supplies_api-service.js"></script>
+		<script src="js/service/transformer/supplies_response-transformer.js"></script>		
+		<script src="js/service/transformer/donors_response-transformer.js"></script>					
+	</body>
+</html>

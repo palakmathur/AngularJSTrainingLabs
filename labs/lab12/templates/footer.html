@@ -1,0 +1,24 @@
+<footer>
+	<nav>
+		<ul>
+		 	<li ui-sref-active="active">
+		 		<a ui-sref="home">Lemon-Aide</a>
+		 	</li>
+		 	<li ui-sref-active="active">
+				<a ui-sref="give">Give</a>
+		 	</li>				 		
+		 	<li ng-class="{active: $state.includes('sell')}">
+		 		<a ui-sref="sell">Sell</a>
+		 	</li>
+		 	<li ui-sref-active="active">
+				<a ui-sref="supplies">Supplies</a>
+		 	</li>				 	
+		 	<li ng-class="{active: $state.includes('reports')}">
+				<a ui-sref="reports.sales">Reports</a>
+		 	</li>
+		 	<li><a href="http://www.alexslemonade.org/" target="_blank">The Imagineer!
+		 	<span ng-if="headquarter.distance"> HQ are only {{headquarter.distance}}m away.</span>
+		 	</a></li>
+	 	</ul>		
+	</nav>
+</footer>	

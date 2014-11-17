@@ -1,0 +1,9 @@
+/*.structure-animation.ng-enter {
+	-webkit-transition: 0.5s linear all;
+  	transition: 0.5s linear all;
+  	opacity: 0;
+}
+
+.structure-animation.ng-enter-active { 
+	opacity: 1; 
+}*/

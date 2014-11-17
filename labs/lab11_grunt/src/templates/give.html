@@ -1,0 +1,97 @@
+<section ng-attr-id="{{page.title | lowercase}}">
+	<section>
+	<div lemon-title></div>
+		<p>
+			Why do we want to make lemons from lemonade? It is all about <a href="http://www.alexslemonade.org/about/meet-alex" target="_blank">Alex</a>. There was this awesome kid who passed away from cancer. She had a dream ... a vision to eradicate childhood cancer! She never got to see that dream come true, but others have picked up where she left off.
+			<a href="http://www.alexslemonade.org/" target="_blank">
+				<img src="images/images.jpg" alt="Heifer International Logo">
+			</a>
+		</p>
+		<p>
+			Alex started a lemonade stand to be able to raise money to give to other kids. She wanted to pass on the gift she had been given from all the people who had helped her. Her mission <strong>fighting childhood cancer, one cup at a time.</strong>
+		</p>
+		<p>
+			Would you like to participate in fighting childhood cancer?
+		</p>
+		<form name="giveForm" 
+			ng-submit="addDonor()"
+			ng-controller="GiveFormController"
+			novalidate>
+			
+			<!-- Giver Name: Minimum length 3 / Required -->
+			<label for="giverName">What is your name:</label>
+			<input type="text" name="giverName" id="giverName" 
+				placeholder="Your Name"
+				ng-model="giver.name"  
+				ng-minlength=3 
+				required/>
+			<div class="error"
+				ng-messages="giveForm.giverName.$error"
+				ng-messages-multiple>
+				<div ng-message="required">*Required</div>
+				<div ng-message="minlength">Name must be longer than 3</div>
+			</div>
+	
+			<!-- Giver Telephone: Required -->
+			<label for="phone">Best number to reach you:</label>
+			<input type="tel" name="phone" id="phone"
+				placeholder="Phone Number"
+				ng-model="giver.phone"  
+				required />
+			<div class="error"
+				ng-messages="giveForm.phone.$error">
+				<div ng-message="required">*Required</div>
+			</div>
+
+			<!-- Giver Address: None -->
+			<label for="streetAddress">Mailing address:</label>
+			<input type="text" name="streetAddress" id="streetAddress"
+				placeholder="Street Address" 
+				ng-model="giver.address" />
+
+			<!-- Giver Zipcode: Pattern / Required -->
+			<label for="zipcode">Mailing zipcode:</label>
+			<input type="text" name="zipcode" id="zipcode" 
+				placeholder="Zipcode"
+				ng-model="giver.zipcode"  
+				ng-pattern="/(\d{5}([\-]\d{4})?)/" 
+				required />
+			<div class="error"
+				ng-messages="giveForm.zipcode.$error"
+				ng-messages-multiple>
+				<div ng-message="required">*Required</div>
+				<div ng-message="pattern">Make sure you have 5 digits</div>
+			</div>	
+
+			<!-- Giver Email Address: Required -->
+			<label for="email">Email address:</label>
+			<input type="email" name="email" id="email" 
+				placeholder="Email" 
+				ng-model="giver.email"  
+				required />	
+			<div class="error"
+				ng-messages="giveForm.email.$error">
+				<div ng-message="required">*Required</div>
+				<div ng-message="email">Needs an @ symbol</div>
+			</div>		
+
+			<!-- Giver Contact Choice: Defualts to email -->
+			<label for="contactChoice">Best way to contact you:</label>
+			<select id="contactChoice" name="contactChoice"
+				ng-model="giver.contact">
+				<option>Phone</option>
+				<option>Mail</option>
+				<option ng-selected="true">Email</option>
+			</select>					
+
+			<p>{{form.message}}</p>
+			<input type="submit" id="submitDonation" 
+				ng-disabled="form.isNotSubmittable" value="Help now!">
+		</form>
+	</section>
+	<aside>
+		<p ng-if="page.coords">
+			Alex's Lemonade Stand Foundation headquarter's are in Pennsylvania. We have your coordinates as: {{page.coords}}
+		</p>
+	</aside>
+</section>

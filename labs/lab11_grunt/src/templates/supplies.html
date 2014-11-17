@@ -1,0 +1,31 @@
+<section ng-attr-id="{{page.title | lowercase}}">
+	
+	<div lemon-title></div>
+	<p>
+		Yikes! We can't run out of product. Make sure our levels are looking good! Otherwise its time to hop in the <em>Mini</em> and run to the market!
+	</p>
+	<form id="saveSupplies">
+
+		<label for="lemonadeSupply">Lemonaide (in cups) <mark>{{actual.lemonadeQuantity}}</mark> out of <data>{{maximum.lemonadeQuantity}}<data></label>
+		<input type="range" id="lemonadeSupply" name="lemonadeSupply" 
+			min="1" max="{{maximum.lemonadeQuantity}}" 
+			ng-model="actual.lemonadeQuantity"
+			ng-readonly="true"/>
+		
+		<label for="healthySnackSupply">Healthy Snack (in pieces) <mark>{{actual.healthySnackQuantity}}</mark> out of <data>{{maximum.healthySnackQuantity}}</data></label>
+		<input type="range" id="healthySnackSupply" name="healthySnackSupply" 
+			min="1" max="{{maximum.healthySnackQuantity}}"
+			ng-model="actual.healthySnackQuantity"
+			ng-readonly="true"/>
+		
+		<label for="treatsSupply">Treats (in bags) <mark>{{actual.treatQuantity}}</mark> out of <data>{{maximum.treatQuantity}}</data></label>
+		<input type="range" id="treatsSupply" name="treatsSupply" 
+			min="1" max="{{maximum.treatQuantity}}"
+			ng-model="actual.treatQuantity"
+			ng-readonly="true"/>
+
+		<hr>
+
+	</form>
+
+</section>

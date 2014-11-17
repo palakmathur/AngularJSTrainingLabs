@@ -1,0 +1,10 @@
+Lab 8:
+- Create a supplies page
+  + Have it list the available products we have
+  + Have it list the maximum quantities
+  + Get the current quantities from the backend
+    - Create a json file that will serve you this information
+  + Have a reset product quantity button that will fetch the backend sales
+  + You could use a range element to display the information
+
+  

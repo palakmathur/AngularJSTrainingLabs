@@ -1,0 +1,17 @@
+<div ng-click="showSelected()">
+	<header>
+		<ng-transclude></ng-transclude>
+		{{report.date | showDate}}
+	</header>
+	<section>
+		Quantity: {{report.quantity}}<br/>
+		Net Profit:{{report.netSale | currency}}<br/>
+		Cost of Goods: {{report.costOfGoods | currency}}<br/>
+	</section>
+	<footer>
+		<img 
+			ng-if="report.grossProfit >= 200"
+			ng-src="{{report.goodImage}}" alt="Good jiorb" />
+		Gross Profit: {{report.grossProfit}}
+	</footer>
+</div>			

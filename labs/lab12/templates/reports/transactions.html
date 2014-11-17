@@ -1,0 +1,32 @@
+<!-- Report: Transactions sub-state -->
+<h3 ng-hide="transactions.length">
+	No transactions yet today... Get to work!
+</h3>
+<section ng-if="transactions.length">
+	<p>
+		So far we have <mark>{{transactions.length}}</mark> transaction<span ng-if="transactions.length > 1">s</span> for today.
+	</p>
+	<table>
+		<tr>
+			<th>Healthy Snack</th>
+			<th>Treat</th>
+			<th>Large Lemonade</th>
+			<th>Medium Lemonade</th>
+			<th>Total Cups of Lemonade</th>
+			<th>Products</th>
+			<th>Gross Profit</th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="transaction in transactions | orderBy: 'timeStamp'"
+			ng-class="{odd:$odd}">
+			<td>{{transaction.healthySnack}}</td>
+			<td>{{transaction.treat}}</td>
+			<td>{{transaction.largeLemonade}}</td>	
+			<td>{{transaction.mediumLemonade}}</td>	
+			<td>{{transaction.totalLemonade}}</td>	
+			<td>{{transaction.productTotal}}</td>	
+			<td>{{transaction.grossProfit}}</td>
+			<td><button ng-click="deleteTransaction(transaction.id)">Delete</button></td>	
+		</tr>
+	</table>
+</section>

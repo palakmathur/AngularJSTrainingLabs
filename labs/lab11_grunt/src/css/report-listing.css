@@ -1,0 +1,37 @@
+.lemonReportListing {
+ 	border: 1px solid black;
+ 	border-radius: 0.3em;
+ 	display: inline-block;
+ 	list-style-type: none;
+ 	margin: 1em;
+ 	padding: 0.3em;
+ 	width: 15em;
+ }
+
+ .lemonReportListing:hover {
+ 	border-color: #ccc;
+ 	cursor: pointer;
+ }
+
+ .lemonReportListing header, .lemonReportListing footer {
+	background-color: rgba(0,0,0,0.3);
+	text-align: center;
+ }
+
+ .lemonReportListing footer {
+ 	padding: 0.2em;
+ }
+
+  .lemonReportListing footer img {
+ 	border-radius: 3em;
+ 	display: inline-block;
+ 	width: 15px;
+ }
+
+ .lemonReportListing section {
+ 	margin: 0.5em;
+ }
+
+.lemonReportListing.selected {
+ 	border-color: #ccc;
+ }

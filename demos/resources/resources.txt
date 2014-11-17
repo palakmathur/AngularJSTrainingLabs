@@ -1,0 +1,31 @@
+**Follow Me**
+@cmckeachie on Twitter
+funnyant.com (sign up for my email list)
+frontendcast.com
+craigdmckeachie@gmail.com or craig.mckeachie@developintelligence.com
+
+
+**JavaScript**
+http://www.manning.com/resig/
+http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742
+derickbailey.com (sign up for 5 days to mastering JavaScript this)
+
+
+**Coding Standards**
+https://github.com/johnpapa/angularjs-styleguide
+https://github.com/toddmotto/angularjs-styleguide
+http://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html
+https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub
+https://github.com/ngbp/ngbp
+https://github.com/angular/angular-seed
+
+**Promises**
+http://blog.xebia.com/2014/02/23/promises-and-design-patterns-in-angularjs/
+watchmecode.net (Promises from the ground up)
+
+Angular +
+http://angular-ui.github.io/bootstrap/
+http://joshdmiller.github.io/ng-boilerplate/#/about
+
+
+

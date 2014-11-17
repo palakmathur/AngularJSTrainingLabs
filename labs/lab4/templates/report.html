@@ -1,0 +1,30 @@
+<section id="report">
+	
+	<h2>
+		{{page.title}}
+	</h2>
+	<section>
+		<p>
+			There are <mark>{{sales.length}}</mark> months of sales<br>
+			How many would you like to see?<br>
+			<input type="number" id="numOfRows" 
+				ng-model="table.limitValue"/>
+		</p>
+		<table>
+			<tr>
+				<th ng-click="orderByDate()">Date</th>
+				<th ng-click="orderByQuantity()">Quantity</th>
+				<th ng-click="orderBySales()">Net Sales</th>
+				<th ng-click="orderByCostOfGoods()">Cost of Goods</th>
+			</tr>
+			<tr ng-repeat="sale in sales | orderBy: table.orderBy | limitTo: table.limitValue"
+				ng-class="{odd:$odd}">
+				<td>{{$index}}{{sale.date | showDate}}</td>
+				<td>{{sale.quantity}}</td>
+				<td>{{sale.netSale | currency}}</td>
+				<td>{{sale.costOfGoods | currency}}</td>				
+			</tr>
+		</table>
+	</section>
+
+</section>

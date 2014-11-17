@@ -1,0 +1,29 @@
+<section id="sell">
+	<h2>Sell
+	</h2>
+	<ul id="buttons" ng-controller="ProductController">
+	 	<li data-identifier="largeLemonadeItem" data-ng-click="incrementLargeLemonade()">
+	 		Large glass of lemonade<mark>{{transaction.largeLemonadeQuantity}}</mark>
+	 	</li>
+	 	<li data-identifier="mediumLemonadeItem" data-ng-click="incrementMediumLemonade()">
+	 		Medium glass of lemonade<mark>{{transaction.mediumLemonadeQuantity}}</mark>
+ 		</li>
+	 	<li data-identifier="healthySnackItem" data-ng-click="incrementHealthySnack()">
+	 		Healthy snack<mark>{{transaction.healthySnackQuantity}}</mark>
+ 		</li>
+	 	<li data-identifier="treatItem" data-ng-click="incrementTreat()">
+	 		Treat<mark>{{transaction.treatQuantity}}</mark>
+ 		</li>
+	</ul>	
+	<section>
+		<p id="transactionQuantity">
+			Transaction Quantity: <mark>{{transaction.transactionQuantity}}</mark> products
+		<p>
+		<p id="transactionCost">
+			Transaction Cost: <mark>{{transaction.transactionCost}}</mark> products
+		<p>
+		<p>
+			<button id="clearTransaction" data-ng-click="clearTransaction()">Clear Transaction</button>
+		</p>
+	</section>
+</section>

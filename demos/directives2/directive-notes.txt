@@ -1,0 +1,108 @@
+review forms lab solution
+	--add focus directive?
+--------------
+Different ways to define a directive
+https://docs.angularjs.org/guide/directive
+ng-name
+ng:name
+data-ng-name
+x-ng-name
+
+-show expander directive review and go over link and require
+--restrict: 'EA'
+--transclusion
+--scope
+	false (just uses scope from parent controller)
+	true (prototypical inherits scope from parent controller)
+	isolate {} (new scope-- but can explicitly pass data to it)
+	
+	**binding strategies**
+	---bi-directional 
+		=
+		(/think byref/two-way data-binding)
+		see expander.html
+		
+	---local scope property
+		@
+		(think byval/ passed as string)
+		see expander-string.html
+	---parent execution
+		&
+		call function on parent controller's scope
+		see datepicker
+	**scope names**
+	scope:{
+		[name of variable in template]: '[bindingStrategy][name of attribute on tag camelCased]'
+		or
+		[name of attribute and variable in template is the same]: '@', 
+
+	}
+
+
+	 --link
+	 see expander-native.html
+	function link(scope, iElement, iAttrs, controller, transcludeFn) { ... }
+	⊲ scope - Scope - The scope to be used by the 
+	directive for registering watches.
+	⊲ iElement - instance element - The element 
+	where the directive is to be used. It is safe to 
+	manipulate the children of the element only 
+	in postLink function since the children have 
+	already been linked.
+	⊲ iAttrs - instance attributes - Normalized list 
+	of attributes declared on this element shared 
+	between all directive linking functions.
+	⊲ controller - a controller instance - A 
+	controller instance if at least one directive on 
+	the element defines a controller. The controller 
+	is shared among all the directives, which 
+	allows the directives to use the controllers as a 
+	communication channel.
+
+	--require
+	see datepicker again
+	Require another directive and inject its controller as 
+	the fourth argument to the linking function. Takes a 
+	string name (or array of strings) of the directive(s) to 
+	pass in. If an array is used, the injected argument will 
+	be an array in corresponding order.
+	The name can be prefixed with:
+	⊲ (no prefix) - Locate the required controller on the 
+	current element. Throw an error if not found.
+	⊲ ? - Attempt to locate the required controller 
+	or pass null to the link fn if not found. Makes it 
+	optional
+	⊲ ^ - Locate the required controller by searching 
+	the element’s parents. Throw an error if not 
+	found.
+	⊲ ?^ - Attempt to locate the required controller by 
+	searching the element’s parents or pass null to 
+	the link fn if not found.
+	controllerAs
+	If using a controller function, you can use the 
+	myModule.directive(‘directiveName’, 
+	 function ( ) { 
+	 return { 
+	 require: ‘otherDirectiveWithCtrl’, 
+	 link: function(scope, el, attrs, ctrl) { 
+	 ... 
+	 }}; 
+	 });
+
+
+
+-----------
+Labs-
+(pair Java/front-end)
+Lab 6 (skip slides)
+look at these directives and change stuff to get comfortable with them
+https://github.com/shyamseshadri/angularjs-book/tree/master/chapter6
+https://github.com/shyamseshadri/angularjs-book/tree/master/chapter8/datepicker
+
+try to understand each part of directory config object
+
+
+
+
+Example directives from AngularJS OReilly book:
+https://github.com/shyamseshadri/angularjs-book/tree/master/chapter6
