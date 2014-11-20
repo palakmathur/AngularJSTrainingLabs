@@ -15,11 +15,14 @@ app.factory('TransactionService', [function() {
     var mediumLemonadeCost = 5;
 
     //Transaction Count holder
-    var transactionCount = {
-    	healthySnack: 0,
-    	treats: 0,
-    	mediumLemonade: 0,
-    	largeLemonade: 0,
+    var transaction = {
+      largeLemonadeQty: 0,
+      mediumLemonadeQty: 0,
+      healthySnackQty: 0,
+      treatQty: 0,
+      transactionQty: 0,
+      transactionCost: 0,
+
     };
 
     //Running total product count of the transaction
